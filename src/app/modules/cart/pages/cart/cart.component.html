@@ -1,0 +1,16 @@
+<div>
+
+  <div>
+
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-span-4 text-center">
+        Product Id
+      </div>
+      <div class="col-span-4 text-center">
+        Quantity
+      </div>
+    </div>
+  </div>
+  <app-cart-item (removeCart)="deleteItemInCart($event)" [product_id]="item.product_id" [quantity]="item.quantity"
+                 *ngFor="let item of getList()"></app-cart-item>
+</div>

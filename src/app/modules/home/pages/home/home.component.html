@@ -1,3 +1,12 @@
 <div>
-  {{isAuth()}}
+<!--  <app-header></app-header>-->
+
+
+  <div>
+    <div class="grid grid-cols-4">
+      <app-product-card (addToCart)="addToCart($event)" *ngFor="let item of products" [name]="item.name"
+                        [id]="item.id"></app-product-card>
+
+    </div>
+  </div>
 </div>
